@@ -1,0 +1,5 @@
+package newpackage
+
+object NewThing {
+
+}
