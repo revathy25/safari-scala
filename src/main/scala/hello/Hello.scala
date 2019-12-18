@@ -7,6 +7,11 @@ object Hello { // singleton...
   def update(index: Int, value: Any): Unit =
     println(s"doing update with index ${index}, and value ${value}")
 
+  def noArgs():Unit = println("You called noargs") // convention is
+  // functions with empty parens might cause side effects...
+
+  def getValue:Int = /*computation*/ 10 + 100
+
   def main(args: Array[String]): Unit = {
     println("Hello Scala World!")
 
@@ -53,5 +58,8 @@ object Hello { // singleton...
 
     val c = twoOf._1
     println(s"twoOf is ${twoOf}, a is ${a}, b is ${b}")
+    noArgs
+
+    println(s"${getValue}")
   }
 }
